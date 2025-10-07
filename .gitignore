@@ -1,0 +1,37 @@
+# .gitignore for Django, Python, and venv
+
+# Virtual Environment
+.venv
+venv
+env
+
+# Python
+# byte-compiled and cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE files
+.vscode/
+.idea/
+
+# temporary and backup files
+*~
+*.bak
+*.swp
+
+# other files to ignore
+.DS_Store
+
+# Django
+# database
+db.sqlite3
+
+# static files
+static
+media
+
+migrations
+
+# logs
+*.log

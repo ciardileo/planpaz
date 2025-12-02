@@ -21,3 +21,14 @@ BEGIN
 END //
 
 DELIMITER ;
+
+
+/* Procedure de redefinir senha por nome de usuario*/
+DELIMITER //
+CREATE PROCEDURE proc_redefinirSenha (IN usuario VARCHAR(50), IN novaSenha VARCHAR(50))
+BEGIN
+    update users set password = novaSenha
+    WHERE usuario = username;
+END //
+
+DELIMITER ;

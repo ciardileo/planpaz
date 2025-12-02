@@ -23,7 +23,7 @@ END //
 DELIMITER ;
 
 
-/* Procedure de redefinir senha por nome de usuario*/
+/* Procedure de redefinir senha por nome de usuarioclear*/
 DELIMITER //
 CREATE PROCEDURE proc_redefinirSenha (IN usuario VARCHAR(50), IN novaSenha VARCHAR(50))
 BEGIN

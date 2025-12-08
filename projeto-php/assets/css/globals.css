@@ -1,0 +1,414 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* CONFIGURAÇÕES GERAIS E VARIÁVEIS */
+:root {
+    --primary-color: #03624c;
+    --secondary-color: #aacbc4;
+    --background-color: #f1f7f6;
+    --dark-color: #06302c;
+    --title-font: "Poppins", sans-serif;
+    --body-font: "Inter", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--background-color);
+    overflow-y: scroll;
+}
+
+.empty-container {
+    height: 250px;
+    width: 100%;
+}
+
+/* ELEMENTOS GERAIS */
+.title {
+    font-size: 2.5em;
+    font-family: var(--title-font);
+    margin-top: 10px;
+    flex: 4;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    font-family: var(--body-font);
+    margin: 15px 0
+}
+
+.cookie {
+    width: 50vw;
+    padding: 25px;
+    border-radius: 15px;
+    font-family: var(--body-font);
+    font-weight: 600;
+    color: white;
+    position: fixed;
+    left: 50%;
+    top: 25px;
+    transform: translateX(-50%);
+}
+
+.error {
+    border: 1px solid rgb(138, 5, 5);
+    background-color: rgb(85, 8, 8);   
+}
+
+.success {
+    border: 1px solid rgb(15, 105, 15);
+    background-color: rgb(29, 179, 29);
+}
+
+/* CABEÇALHO */
+.main-header {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+
+.notification-btn {
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: white;
+    border: 0;
+    box-shadow: rgba(100, 100, 111, 0.452) 0px 5px 5px 0px;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.notification-btn:hover {
+    box-shadow: rgba(100, 100, 111, 0.452) 0px 7px 29px 0px;
+}
+
+.notification-btn span {
+    color: var(--primary-color);
+    font-size: 1.7em;
+}
+
+.back-link {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid rgba(177, 177, 177, 0.747);
+    transition: 200ms;
+    color: black;
+}
+
+.back-link:hover {
+    background-color: #e7e7e7;
+}
+
+.back-link span {
+    margin-left: 5px;
+}
+
+.back-link p {
+    font-family: var(--body-font);
+    margin-right: 10px;
+}
+
+/* SEARCHBAR */
+main {
+    padding: 0 15px;
+}
+
+.searchbar {
+    width: 100%;
+    height: 42px;
+    margin-bottom: 15px;
+}
+
+.searchbar input {
+    display: block;
+    border-radius: 15px;
+    border: 0;
+    width: 100%;
+    height: 42px;
+    padding: 10px 10px 10px 50px;
+    box-shadow: rgba(100, 100, 111, 0.151) 0px 7px 10px 0px;
+    font-family: var(--body-font);
+    transition: 200ms;
+}
+
+.searchbar input:focus {
+    outline: none;
+    box-shadow:#03382c52 0px 5px 5px 0px;
+}
+
+.search-button {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 0;
+    position: relative;
+    left: 10px;
+    top: -35px;
+    color: rgba(0, 0, 0, 0.555);
+}
+
+/* CARDS DAS PLANTAS - MEU JARDIM */
+#plants-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+
+.plant-card {
+    display: block;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 25px;
+    border: 1px solid rgba(177, 177, 177, 0.747);
+    width: 45vw;
+    height: 240px;
+    cursor: pointer;
+    transition: 300ms;
+    color: black;
+}
+
+.plant-card:hover {
+    box-shadow: rgba(100, 100, 111, 0.151) 0px 7px 10px 0px;
+}
+
+.plant-image {
+    display: block;
+    border-radius: 25px 25px 0 0 ;
+    width: 100%;
+    height: 62%;
+    position: relative;
+    top: 0;
+}
+
+/* .image-filter {
+    background-color: #2bf3c425;
+    width: 100%;
+    height: 65%;
+    position: relative;
+    top: -65%;
+    border-radius: 15px 15px 0 0;
+} */
+
+.plant-description {
+    margin-top: 5px;
+    padding: 10px 15px;
+}
+
+.plant-description .container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.plant-description > p {
+    font-family: var(--body-font);
+    font-size: 0.85em;
+    margin-top: 10px;
+}
+
+.plant-description .container h3 {
+    font-family: var(--title-font);
+    font-size: 1em;
+}
+
+.plant-description .container p {
+    font-family: var(--body-font);
+    font-size: 0.8em;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.green {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* FORMULÁRIOS */
+#plant-cover {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.form-item {
+    font-family: var(--body-font);
+    margin: 10px;
+}
+
+.form-item label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-weight: 0.9em;
+}
+
+.form-item input[type="text"], .form-item input[type="date"] {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  border: none;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 80%;
+  box-sizing: border-box;
+  height: 45px;
+  font-family: 'Poppins';
+  font-size: 1em;
+  font-weight: 400;
+  padding-left: 20px;
+}
+
+input[type="submit"], #cancel-new-plant-btn, #delete-modal-btn {
+  display: block;
+  width: 80%;
+  margin: 15px;
+  box-sizing: border-box;
+  height: 50px;
+  font-family: 'Poppins';
+  font-size: 1em;
+  font-weight: 600;
+  border-radius: 20px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#cancel-new-plant-btn {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+#delete-modal-btn {
+    background-color: #af2222;
+    color: white;
+}
+
+/* máscara preta do modal */
+#modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* div do modal de deleção */
+#confirm-delete-modal {
+    background-color: white;
+    width: 80%;
+    padding: 20px;
+    font-family: var(--body-font);
+    border: 1px solid #888;
+    margin: 200px auto;
+    border-radius: 20px;
+}
+
+/* div do modal de criação */
+#new-plant-modal {
+    width: 90%;
+    height: 60vh;
+    background-color: white;
+    border-radius: 15px 15px 0 0;
+    position: fixed;
+    bottom: 0;
+    padding: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* RODAPÉ (navbar e botão de adicionar) */
+#add-plant-btn {
+    display: block;
+    background: white;
+    border-radius: 50px;
+    border: none;
+    padding: 5px;
+    width: 60px;
+    height: 60px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: fixed;
+    right: 20px;
+    bottom: 90px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+#add-plant-btn:hover {
+    box-shadow: rgba(100, 100, 111, 0.795) 0px 7px 10px 0px;
+}
+
+#add-plant-btn span {
+    color: var(--primary-color);
+    font-size: 3em;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--dark-color);
+    border-radius: 15px;
+    height: 67px;
+    width: 95%;
+    position: fixed;
+    bottom: 10px;
+    left: 2.5%;
+}
+
+.nav-item {
+    color: white;
+    font-family: var();
+    font-family: var(--body-font);
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.nav-item p {
+    text-align: center;
+}
+
+.nav-icon {
+    display: block;
+    width: 55px;
+    margin: auto;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-icon span {
+    display: block;
+    margin: auto;
+    margin-bottom: 5px;
+    width: fit-content;
+    font-size: 2em;   
+    padding: 5px;
+}
+
+.selected {
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    font-variation-settings: "FILL" 1;
+    box-shadow: rgba(255, 255, 255, 0.15) 0px 5px 5px 0px;
+}

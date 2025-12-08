@@ -1,0 +1,256 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #f1f7f6;
+  height: 100vh;
+  width: 100%;
+  align-items: stretch;
+}
+
+.logo-container, .logo-container-index{
+  align-items: center;
+  background-color: #032221;
+  justify-content: center;
+  margin: 2% auto 0 auto;
+  height: 26%;
+  width: 96%;
+  border-radius: 5%;
+  box-shadow: 0 0px 24px rgba(0, 0, 0, 0.4);
+}
+
+.logo-container-index {
+  height: 40%;
+  width: 96%;
+}
+
+.welcome-container h1 {
+  font-size: 1.4em;
+}
+
+.welcome-container h2 {
+  font-size: 0.8em;
+}
+
+h1{
+  font-family: 'poppins';
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+h2{
+  font-family: 'poppins';
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+.btn-signup, .btn-signin{
+  font-family: 'poppins';
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+.welcome-container {
+  margin-top: 21%;
+  margin-bottom: 21%;
+  width: 100%;
+  text-align: center;
+  color: #032221;
+  font-family: 'poppins';
+  font-size: 2em;
+}
+
+.text-container, .text-container-signup {
+  text-align: left;
+  margin-bottom: 6%;
+  margin-left: 6%;
+  width: 96%;
+  color: #032221;
+  font-family: 'poppins';
+}
+
+.text-container-signup {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.alert-container {
+  width: 96%;
+  margin: 5% auto 2% auto;
+}
+
+.alert-box {
+  flex: 1 1 60%;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: 'Inter';
+  font-size: 1em;
+  font-weight: 500;
+  max-width: 100%;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.signin-container h1{
+  font-size: 2.3em;
+}
+
+.signin-container h2{
+  font-size: 1.4em;
+}
+
+.input-container, .input-container-signup {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 100%;
+  margin-bottom: 16%;
+  padding: 0 2%;
+  box-sizing: border-box;
+}
+
+.input-container-signup {
+  margin-bottom: 5%;
+}
+
+.input-container label {
+  font-family: 'Inter';
+  font-size: 1em;
+  font-weight: 400;
+  color: #000000;
+  margin-top: 5%;
+  margin-bottom: 1%;
+  padding-left: 20px;
+}
+
+.input-container-signup label {
+  font-family: 'Inter';
+  font-size: 1em;
+  font-weight: 400;
+  color: #000000;
+  margin-top: 5%;
+  margin-bottom: 1%;
+  padding-left: 20px;
+}
+
+.input-container p a {
+  text-decoration: none;
+  color: #032221;
+  font-weight: 600;
+}
+
+.input-container-signup p a {
+  text-decoration: none;
+  color: #032221;
+  font-weight: 600;
+}
+
+.input-container p {
+  font-family: 'Inter';
+  font-size: 0.9em;
+  font-weight: 400;
+  color: #000000;
+  padding-left: 20px;
+}
+
+.input-container-signup p{
+  font-family: 'Inter';
+  font-size: 0.9em;
+  font-weight: 400;
+  color: #000000;
+  padding-left: 20px;
+}
+
+.input-field{
+  background-color: #f1f7f6;
+  color: #000000;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  box-sizing: border-box;
+  height: 80px;
+  font-family: 'Poppins';
+  font-size: 1em;
+  font-weight: 400;
+  padding-left: 20px;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 96%;
+  margin: 2% auto;
+  box-sizing: border-box;
+  height: 80px;
+  font-family: 'Poppins';
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+.button-container {
+  margin: auto;
+  position: relative;
+  width: 96%;
+  height: 100px;
+}
+
+.btn-signin, .btn-signup {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background-color: #ffffff;
+  color: #03624c;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  width: 54%;
+  height: 80px;
+}
+
+.btn-signup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  text-align: left;
+  padding-left: 9%;
+  background-color: #f1f7f6;
+  color: #000000;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 0px 24px rgba(0, 0, 0, 0.15);
+  width: 96%;
+  height: 80px;
+}
+
+#form {
+  width: 96%;
+  margin: 2% auto 0 auto;
+  display: flex;
+  flex-direction: column;
+}
